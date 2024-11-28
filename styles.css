@@ -1,0 +1,140 @@
+/* Fondo general */
+body {
+    background-color: #f0f5f9; /* Color claro pero con suficiente contraste */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer esté en la parte inferior */
+    margin: 0;
+}
+
+/* Caja del chat con un fondo más destacado */
+.chat-container {
+    max-width: 800px;
+    margin: 50px auto; /* Espacio superior y centrado */
+    background-color: #ffffff; /* Fondo blanco puro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil pero visible */
+    overflow: hidden;
+    padding: 20px;
+    border: 2px solid #198754; /* Bordes verdes */
+}
+
+/* Fondo interno del área de mensajes */
+.chat-window {
+    height: 550px; /* Aumentamos la altura */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* Asegura que los mensajes se apilen verticalmente */
+    gap: 15px; /* Espacio entre mensajes */
+    padding: 15px;
+    background-color: #f8f9fa; /* Fondo ligeramente gris */
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Estilo de mensajes */
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+    word-wrap: break-word;
+    display: inline-block; /* Ajusta automáticamente el ancho según el contenido */
+    position: relative; /* Para posicionar el icono */
+}
+
+/* Mensaje del usuario */
+.user-message {
+    background-color: #e0f7fa; /* Celeste claro */
+    color: #004d40; /* Texto oscuro para el usuario */
+    align-self: flex-end; /* Alinea el mensaje a la derecha */
+    text-align: right;
+    margin-right: 0; /* Elimina cualquier margen extra a la derecha */
+    border: 1px solid #004d40; /* Borde oscuro para el mensaje del usuario */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el mensaje */
+}
+
+/* Mensaje del bot */
+.bot-message {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Texto oscuro para el bot */
+    align-self: flex-start; /* Alinea el mensaje a la izquierda */
+    text-align: left;
+    margin-left: 0; /* Elimina cualquier margen extra a la izquierda */
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos de forma vertical */
+    gap: 10px; /* Espacio entre el avatar y el mensaje */
+    padding: 10px; /* Espaciado dentro del mensaje */
+    border: 1px solid #155724; /* Borde oscuro para el mensaje del bot */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el mensaje */
+}
+
+/* Icono del robot */
+.bot-message i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    color: #155724; /* Icono verde oscuro */
+}
+
+/* Fondo y estilo del área de entrada */
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background-color: #e9ecef; /* Fondo ligeramente gris para destacar */
+    border-top: 2px solid #198754; /* Borde superior verde */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #ffffff; /* Fondo blanco para entrada de texto */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+/* Botón con colores más llamativos */
+.chat-input button {
+    background-color: #198754; /* Verde para el botón */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #145c42; /* Verde más oscuro en hover */
+}
+
+/* Logo */
+.logo {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #198754;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto; /* Asegura que el footer esté al final de la página */
+    text-align: center;
+}
+
+footer a {
+    color: #ffdb58; /* Un amarillo suave para los enlaces */
+}
+
+/* Avatar del bot */
+.bot-avatar {
+    display: flex;
+    align-items: center; /* Alinea la imagen al centro verticalmente */
+}
+
+.avatar-img {
+    width: 40px; /* Tamaño del avatar */
+    height: 40px; /* Asegura que sea cuadrado */
+    border-radius: 50%; /* Hace el avatar redondo */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del círculo */
+    margin-right: 10px; /* Espacio entre el avatar y el mensaje */
+}
